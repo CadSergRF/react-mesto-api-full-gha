@@ -12,6 +12,7 @@ const allRoutes = require('./routes/index');
 const errors = require('./middlewares/errors');
 const rateLimiter = require('./middlewares/rateLimiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const corsError = require('./middlewares/corsError');
 
 const app = express();
 
@@ -19,7 +20,8 @@ const { PORT = 3000 } = process.env;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
-app.use(bodyParser.json())
+app.use(corsError)
+  .use(bodyParser.json())
   .use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
