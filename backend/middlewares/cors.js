@@ -1,6 +1,6 @@
 const allowedCors = [
   'mesto-csrf.nomoredomains.monster',
-  '127.0.0.1:3000/mestodb',
+  '127.0.0.1:3000',
 ];
 
 module.exports = (req, res, next) => {
