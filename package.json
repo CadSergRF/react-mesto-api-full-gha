@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express-winston": "^4.2.0",
-    "winston": "^3.8.2"
-  }
-}
