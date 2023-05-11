@@ -6,12 +6,14 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const celebrateErrors = require('celebrate').errors;
 const helmet = require('helmet');
+const cors = require('cors');
 
 const allRoutes = require('./routes/index');
 
 const errors = require('./middlewares/errors');
 const rateLimiter = require('./middlewares/rateLimiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const corsErr = require('./middlewares/cors');
 
 const app = express();
 
@@ -19,13 +21,15 @@ const { PORT = 3000 } = process.env;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
-app.use(bodyParser.json())
+app.use(cors())
+  .use(bodyParser.json())
   .use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
   .use(requestLogger)
   .use('/', allRoutes)
   .use(errorLogger)
+  .use(corsErr)
   .use(celebrateErrors())
   .use(errors);
 
