@@ -12,6 +12,7 @@ const allRoutes = require('./routes/index');
 const errors = require('./middlewares/errors');
 const rateLimiter = require('./middlewares/rateLimiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const corsErr = require('./middlewares/cors');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(bodyParser.json())
   .use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
+  .use(corsErr)
   .use(requestLogger)
   .use('/', allRoutes)
   .use(errorLogger)
