@@ -16,9 +16,10 @@ const corsError = require('./middlewares/corsError');
 
 const app = express();
 
-const { PORT = 3000 } = process.env;
+const { PORT, DATABASE } = process.env;
+const { DEFAULT_PORT, DEFAULT_DATABASE } = require('./utils/config');
 
-mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
+mongoose.connect(DATABASE || DEFAULT_DATABASE);
 
 app.use(corsError)
   .use(bodyParser.json())
@@ -31,7 +32,4 @@ app.use(corsError)
   .use(celebrateErrors())
   .use(errors);
 
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`App listening on port ${PORT}`);
-});
+app.listen(PORT || DEFAULT_PORT);
