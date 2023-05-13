@@ -18,6 +18,20 @@
 ### Backend: https://api.mesto-csrf.nomoredomains.monster
 ### Публичный IP-адрес: 158.160.38.243
 
+## Основные технологии используемые в проекте
+### Frontend
+- HTML
+- CSS
+- [React](https://ru.react.js.org/)
+- [React-router](https://reactrouter.com/en/main)
+- [Create-react-app](https://create-react-app.dev/)
+- Адаптивная верстка
+
+### Backend
+- [Express](https://expressjs.com/ru/) - фреймворк веб-приложений Node.js;
+- [MongoDB](https://www.mongodb.com/) - СУБД No-SQL;
+- [Mongoose](https://mongoosejs.com/) - ORM для MongoDB;
+
 ## Автор
 
 **Сергей Евдокимов**
