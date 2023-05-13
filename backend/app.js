@@ -6,14 +6,14 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const celebrateErrors = require('celebrate').errors;
 const helmet = require('helmet');
-// const cors = require('cors');
+const cors = require('cors');
 
 const allRoutes = require('./routes/index');
 
 const errors = require('./middlewares/errors');
 const rateLimiter = require('./middlewares/rateLimiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const corsError = require('./middlewares/corsError');
+// const corsError = require('./middlewares/corsError');
 
 const app = express();
 
@@ -24,7 +24,10 @@ mongoose.connect(DATABASE || DEFAULT_DATABASE);
 
 // .use(corsError)
 
-app.use(bodyParser.json())
+app.use(cors({
+  origin: "http://http://localhost:3000"
+}))
+  .use(bodyParser.json())
   .use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
