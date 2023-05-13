@@ -22,8 +22,9 @@ const { DEFAULT_PORT, DEFAULT_DATABASE } = require('./utils/config');
 
 mongoose.connect(DATABASE || DEFAULT_DATABASE);
 
-app.use(corsError)
-  .use(bodyParser.json())
+// .use(corsError)
+
+app.use(bodyParser.json())
   .use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
