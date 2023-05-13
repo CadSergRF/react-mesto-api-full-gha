@@ -1,8 +1,9 @@
 [![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
 
-# Проект Mesto (фронтенд + бэкенд)
+## Проект Mesto (фронтенд + бэкенд)
 
-## Учебный проект в рамках курса "Веб-разработчик" от Yandex Practicum. Назначение прокта: Сервис для обмена фотографиями.
+### Учебный проект в рамках курса "Веб-разработчик" от Yandex Practicum. 
+###Назначение прокта: Сервис для обмена фотографиями.
 ---
 В проекте реализованы возможности:
 - Регистрация / авторизация пользователя
@@ -12,7 +13,7 @@
 - Добавление / удаление лайка фото
 
 ---
-# Ссылки:
+## Ссылки:
 ### Frontend: https://mesto-csrf.nomoredomains.monster/
 ### Backend: https://api.mesto-csrf.nomoredomains.monster
 ### Публичный IP-адрес: 158.160.38.243
