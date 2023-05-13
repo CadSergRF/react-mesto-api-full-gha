@@ -25,7 +25,8 @@ mongoose.connect(DATABASE || DEFAULT_DATABASE);
 // .use(corsError)
 
 app.use(cors({
-  origin: "*"
+  origin: "*",
+  credentials: true
 }))
   .use(bodyParser.json())
   .use(helmet())
