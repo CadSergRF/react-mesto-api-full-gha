@@ -1,6 +1,8 @@
 const allowedCors = [
   'http://mesto-csrf.nomoredomains.monster',
   'https://mesto-csrf.nomoredomains.monster',
+  'http://api.mesto-csrf.nomoredomains.monster',
+  'https://api.mesto-csrf.nomoredomains.monster',
   'http://158.160.38.243',
   'https://158.160.38.243',
   'http://localhost:3000',

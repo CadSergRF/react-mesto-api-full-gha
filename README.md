@@ -14,9 +14,10 @@
 
 ---
 ## Ссылки:
-### Frontend: https://mesto-csrf.nomoredomains.monster/
-### Backend: https://api.mesto-csrf.nomoredomains.monster
-### Публичный IP-адрес: 158.160.38.243
+Frontend: https://mesto-csrf.nomoredomains.monster/
+Backend: https://api.mesto-csrf.nomoredomains.monster
+Публичный IP-адрес: 158.160.38.243
+### Репозиторий проекта: https://github.com/CadSergRF/react-mesto-api-full-gha
 
 ## Основные технологии используемые в проекте
 ### Frontend
