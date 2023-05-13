@@ -25,7 +25,7 @@ mongoose.connect(DATABASE || DEFAULT_DATABASE);
 // .use(corsError)
 
 app.use(cors({
-  origin: "http://http://localhost:3000"
+  origin: "*"
 }))
   .use(bodyParser.json())
   .use(helmet())
