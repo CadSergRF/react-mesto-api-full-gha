@@ -1,0 +1,21 @@
+.place__info {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 22px 21px 22px 19px;
+  border-radius: 0 0 10px 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .place__info {
+    padding: 25px 15px 31px 21px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .place__info {
+    padding: 25px 20px 26px 21px;
+  }
+}

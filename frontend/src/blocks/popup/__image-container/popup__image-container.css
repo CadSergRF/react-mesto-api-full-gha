@@ -1,0 +1,12 @@
+.popup__image-container {
+  box-sizing: border-box;
+  width: fit-content;
+  position: relative;
+}
+
+
+@media screen and (max-width: 800px) {
+  .popup__image-container {
+    margin: 50px 40px;
+  }
+}

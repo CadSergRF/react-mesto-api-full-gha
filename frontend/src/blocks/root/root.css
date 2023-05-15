@@ -1,0 +1,12 @@
+.root {
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+}

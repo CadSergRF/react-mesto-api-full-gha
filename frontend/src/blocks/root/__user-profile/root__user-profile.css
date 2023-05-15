@@ -1,0 +1,9 @@
+.root__user-profile {
+  margin: 40px 0 51px;
+}
+
+@media screen and (max-width: 400px) {
+  .root__user-profile {
+    margin-bottom: 34px;
+  }
+}

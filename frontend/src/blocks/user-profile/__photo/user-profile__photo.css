@@ -1,0 +1,13 @@
+.user-profile__photo {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .user-profile__photo {
+    margin-bottom: 26px;
+  }
+}

@@ -1,0 +1,15 @@
+.root__container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 938px) {
+  .root__container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 19px;
+    margin: 0;
+  }
+}

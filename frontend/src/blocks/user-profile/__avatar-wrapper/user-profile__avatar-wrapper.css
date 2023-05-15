@@ -1,0 +1,26 @@
+.user-profile__avatar-wrapper {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.user-profile__avatar-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../../../img/editAvatar.svg) no-repeat center center #000;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+
+.user-profile__avatar-wrapper:hover::before {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, .8);
+  }

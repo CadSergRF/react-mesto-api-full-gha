@@ -1,0 +1,21 @@
+.place__delete {
+  width: 18px;
+  min-width: 18px;
+  height: 19px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url(../../../img/basket.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: opacity .2s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.place__delete:hover {
+  opacity: .6;
+}

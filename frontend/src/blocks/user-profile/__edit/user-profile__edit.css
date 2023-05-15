@@ -1,0 +1,26 @@
+.user-profile__edit {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #fff;
+  background-image: url(../../../img/onEditBtn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-color: transparent;
+  transition: opacity .2s ease-in-out;
+  cursor: pointer;
+}
+
+.user-profile__edit:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 800px) {
+  .user-profile__edit {
+    width: 18px;
+    height: 18px;
+    background-size: 7.5px 7.5px;
+  }
+}

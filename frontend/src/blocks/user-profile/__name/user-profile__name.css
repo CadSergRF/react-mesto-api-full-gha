@@ -1,0 +1,28 @@
+.user-profile__name {
+  width: 290px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .user-profile__name {
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .user-profile__name {
+    width: 200px;
+    justify-self: end;
+    text-align: end;
+  }
+}

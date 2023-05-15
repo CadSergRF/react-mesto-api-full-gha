@@ -1,0 +1,14 @@
+.auth__form-btn {
+  width: 100%;
+  min-height: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+}

@@ -1,0 +1,25 @@
+.user-profile__add-place {
+  box-sizing: border-box;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background-image: url(../../../img/onAddBtn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-color: transparent;
+  transition: opacity .2s ease-in-out;
+  cursor: pointer;
+}
+
+.user-profile__add-place:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 800px) {
+  .user-profile__add-place {
+    width: 100%;
+    background-size: 16px 16px;
+  }
+}

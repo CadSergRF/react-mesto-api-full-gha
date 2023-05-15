@@ -1,0 +1,14 @@
+.auth__signin-link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+}
+
+.auth__signin-link:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}

@@ -1,0 +1,25 @@
+.user-profile__info-wrapper {
+  display: grid;
+  grid-template-columns: 294px 1fr;
+  align-items: baseline;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+  row-gap: 8px;
+}
+
+@media screen and (max-width:800px) {
+  .user-profile__info-wrapper {
+    margin-bottom: 36px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .user-profile__info-wrapper {
+    margin-bottom: 34px;
+    width: 100%;
+    grid-template-columns: auto 37px;
+    row-gap: 8px;
+  }
+}

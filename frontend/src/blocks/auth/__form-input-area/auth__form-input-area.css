@@ -1,0 +1,5 @@
+.auth__form-input-area {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}

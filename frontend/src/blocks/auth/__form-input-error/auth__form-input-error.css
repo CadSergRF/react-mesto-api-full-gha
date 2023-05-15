@@ -1,0 +1,8 @@
+.auth__form-input-error {
+  min-height: 17px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.5px;
+  color: #ff0000;
+}

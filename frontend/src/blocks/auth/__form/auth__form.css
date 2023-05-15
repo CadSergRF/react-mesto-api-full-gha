@@ -1,0 +1,6 @@
+.auth__form {
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  grid-gap: 37px;
+}
