@@ -125,7 +125,7 @@ const changeProfileInfo = (req, res, data, next) => {
       if (!user) {
         throw new NotFoundError('Ошибка обновления профиля. Пользователь не найден.');
       }
-      res.send({ data: user });
+      res.send(user);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {

@@ -2,33 +2,26 @@ require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const celebrateErrors = require('celebrate').errors;
 const helmet = require('helmet');
-const cors = require('cors');
+const corsConnect = require('./middlewares/corsSettings');
 
 const allRoutes = require('./routes/index');
 
 const errors = require('./middlewares/errors');
 const rateLimiter = require('./middlewares/rateLimiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-// const corsError = require('./middlewares/corsError');
 
 const app = express();
 
-const { PORT, DATABASE } = process.env;
-const { DEFAULT_PORT, DEFAULT_DATABASE } = require('./utils/config');
+const PORT = process.env.PORT || 3001;
+const DATABASE = process.env.DATABASE || 'mongodb://127.0.0.1:27017/mestodb';
 
-mongoose.connect(DATABASE || DEFAULT_DATABASE);
+mongoose.connect(DATABASE);
 
-// .use(corsError)
-
-app.use(cors({
-  origin: "*",
-  credentials: true
-}))
-  .use(bodyParser.json())
+app.use(express.json())
+  .use(corsConnect)
   .use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
@@ -38,4 +31,7 @@ app.use(cors({
   .use(celebrateErrors())
   .use(errors);
 
-app.listen(PORT || DEFAULT_PORT);
+app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log(`App listening on port ${PORT}`);
+});

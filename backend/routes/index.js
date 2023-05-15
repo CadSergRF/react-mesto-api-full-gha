@@ -7,10 +7,8 @@ const signin = require('./signin');
 const signup = require('./signup');
 const signout = require('./signout');
 const notFoundRoutes = require('./notFound');
-const crashRouter = require('./crashTest');
 
 allRoutes
-  .use('/', crashRouter)
   .use('/signin', signin)
   .use('/signup', signup)
   .use('/signout', signout)

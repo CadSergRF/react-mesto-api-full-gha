@@ -9,17 +9,19 @@ const NotFoundError = require('../errors/NotFoundError');
 module.exports.getCards = (req, res, next) => {
   Card
     .find({})
+    .populate(['owner', 'likes'])
     .then((cards) => res.send(cards))
     .catch(next);
 };
 
 module.exports.createCard = (req, res, next) => {
   const { name, link } = req.body;
-  const owner = req.user._id;
+  const ownerID = req.user._id;
   Card
-    .create({ name, link, owner })
+    .create({ name, link, owner: ownerID })
+    .then((card) => card.populate('owner'))
     .then((card) => {
-      res.status(CREATED_CODE).send({ data: card });
+      res.status(CREATED_CODE).send(card);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -71,7 +73,7 @@ const changeLikesCard = (req, res, changeLikesParam, next) => {
         )
         .then((cardUpdate) => cardUpdate.populate(['owner', 'likes']))
         .then((cardUpdate) => {
-          res.send({ data: cardUpdate });
+          res.send(cardUpdate);
         });
     })
     .catch((err) => {
