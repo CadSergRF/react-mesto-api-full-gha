@@ -8,6 +8,7 @@ const ALLOWED_CORS = [
   'https://158.160.60.104',
   'http://localhost:3000',
   'http://localhost:3001',
+  '*',
 ];
 
 // CORS: Разрешенные методы
