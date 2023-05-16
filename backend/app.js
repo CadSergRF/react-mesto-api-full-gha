@@ -31,8 +31,8 @@ app.use(express.json())
   .use(cors({
     origin: ALLOWED_CORS,
     credentials: true,
-  }));
-app.use(helmet())
+  }))
+  .use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
   .use(requestLogger)
