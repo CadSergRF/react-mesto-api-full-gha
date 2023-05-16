@@ -15,7 +15,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const DATABASE = process.env.DATABASE || 'mongodb://127.0.0.1:27017/mestodb';
 
 mongoose.connect(DATABASE);
