@@ -4,8 +4,10 @@ const ALLOWED_CORS = [
   'https://mesto-csrf.nomoredomains.monster',
   'http://api.mesto-csrf.nomoredomains.monster',
   'https://api.mesto-csrf.nomoredomains.monster',
-  'http://158.160.60.104',
-  'https://158.160.60.104',
+  'http://51.250.1.77',
+  'https://51.250.1.77',
+  'http://51.250.1.77:3000',
+  'https://51.250.1.77:3000',
   'http://localhost:3000',
 ];
 
