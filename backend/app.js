@@ -5,24 +5,34 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const celebrateErrors = require('celebrate').errors;
 const helmet = require('helmet');
-const corsConnect = require('./middlewares/corsSettings');
+const cors = require('cors');
 
 const allRoutes = require('./routes/index');
 
 const errors = require('./middlewares/errors');
 const rateLimiter = require('./middlewares/rateLimiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+// const corsConnect = require('./middlewares/corsSettings');
+const ALLOWED_CORS = require('./utils/constants');
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
-const DATABASE = process.env.DATABASE || 'mongodb://127.0.0.1:27017/mestodb';
+const PORT = 3000;
+const DATABASE = 'mongodb://127.0.0.1:27017/mestodb';
 
 mongoose.connect(DATABASE);
 
+app.options('*', cors({
+  origin: ALLOWED_CORS,
+  credentials: true,
+}));
+
 app.use(express.json())
-  .use(corsConnect)
-  .use(helmet())
+  .use(cors({
+    origin: ALLOWED_CORS,
+    credentials: true,
+  }));
+app.use(helmet())
   .use(rateLimiter)
   .use(cookieParser())
   .use(requestLogger)

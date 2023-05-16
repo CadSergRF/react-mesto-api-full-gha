@@ -1,4 +1,4 @@
-export const BASE_URL_AUTH = 'https://api.mesto-csrf.nomoredomains.monster';
+export const BASE_URL_AUTH = 'http://localhost:3000';
 
 const _responceProcessing = (res) => (res.ok) ? res.json() : Promise.reject(`Ошибка в Api: ${res.status} ${res.statusText}`);
 
