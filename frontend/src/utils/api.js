@@ -106,7 +106,7 @@ export class Api {
 
 const api = new Api({   // экземпляр класса Api - запросы к серверу
   // baseUrl: 'http://localhost:3000',
-  baseUrl: 'http://api.mesto-csrf.nomoredomains.monster',
+  baseUrl: 'https://api.mesto-csrf.nomoredomains.monster',
   headers: {
     'Content-Type': 'application/json'
   }
