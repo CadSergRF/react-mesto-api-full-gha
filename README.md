@@ -1,4 +1,3 @@
-[![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
 
 ## Проект Mesto (фронтенд + бэкенд)
 
@@ -13,10 +12,21 @@
 - Добавление / удаление лайка фото
 
 ---
+### Запуск проекта
+
+- Backend:
+  - `npm lint` — запускает проверку линтером
+  - `npm run start` — запускает сервер
+  - `npm run dev` — запускает сервер с hot-reload
+- Frontend:
+  - `npm run build` — запуск проекта в режиме продакшн, с формированием файлов подготовленных к деплою в директории `/build`
+  - `npm start` — запуск проекта в режиме разработки
+
+---
 ## Ссылки:
 Frontend: https://mesto-csrf.nomoredomains.monster/
 Backend: https://api.mesto-csrf.nomoredomains.monster
-Публичный IP-адрес: 51.250.67.86
+Публичный IP-адрес: 158.160.38.243
 ### Репозиторий проекта: https://github.com/CadSergRF/react-mesto-api-full-gha
 
 ## Основные технологии используемые в проекте
@@ -32,6 +42,25 @@ Backend: https://api.mesto-csrf.nomoredomains.monster
 - [Express](https://expressjs.com/ru/) - фреймворк веб-приложений Node.js;
 - [MongoDB](https://www.mongodb.com/) - СУБД No-SQL;
 - [Mongoose](https://mongoosejs.com/) - ORM для MongoDB;
+- [NGinX](https://nginx.org/ru/) - web-сервер
+
+---
+### Чему я научился работая над проектом
+
+- Разворачивать сервер на Node.js
+- Использовать в работе фреймворк Express
+- Работать с БД MongoDB
+- Использовать в работе с БД ODM mongoose
+- Создавать схемы и модели для работы с БД
+- Обрабатывать различные виды запросов
+- Обрабатывать ошибки некорректных запросов
+- Валидировать приходящую в запросе информацию
+- Работать с JWT-токеном
+- Работать с Cookies
+- Базовой защите приложения
+- Логированию
+- Работе с CORS
+- Деплою проекта на реальный хостинг
 
 ## Автор
 
