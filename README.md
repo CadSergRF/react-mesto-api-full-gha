@@ -2,7 +2,7 @@
 ## Проект Mesto (фронтенд + бэкенд)
 
 ### Учебный проект в рамках курса "Веб-разработчик" от Yandex Practicum. 
-###Назначение прокта: Сервис для обмена фотографиями.
+### Назначение прокта: Сервис для обмена фотографиями.
 ---
 В проекте реализованы возможности:
 - Регистрация / авторизация пользователя
@@ -24,9 +24,9 @@
 
 ---
 ## Ссылки:
-Frontend: https://mesto-csrf.nomoredomains.monster/
-Backend: https://api.mesto-csrf.nomoredomains.monster
-Публичный IP-адрес: 158.160.38.243
+- Frontend: https://mesto-csrf.nomoredomains.monster/
+- Backend: https://api.mesto-csrf.nomoredomains.monster
+- Публичный IP-адрес: 158.160.38.243
 ### Репозиторий проекта: https://github.com/CadSergRF/react-mesto-api-full-gha
 
 ## Основные технологии используемые в проекте
